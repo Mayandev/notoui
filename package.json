@@ -1,0 +1,34 @@
+{
+  "name": "notoui",
+  "version": "0.0.1",
+  "description": "Noto UI is a notion-style tailwindcss component library.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run postcss && npm run prejss && npm run min",
+    "clean": "rm -rf dist/",
+    "postcss": "postcss base.css -o dist/base.css && postcss styled.css -o dist/styled.css",
+    "min": " MINIFY=true postcss base.css -o dist/base.min.css && MINIFY=true postcss styled.css -o dist/styled.min.css",
+    "prejss": "prejss-cli dist/base.css --format commonjs && prejss-cli dist/styled.css --format commonjs",
+    "prepare": "husky install",
+    "pretty-quick": "pretty-quick"
+  },
+  "keywords": [
+    "tailwindcss"
+  ],
+  "author": "mayandev",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "^5.1.12",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^14.1.0",
+    "prejss-cli": "^0.3.3",
+    "prettier": "2.7.1",
+    "pretty-quick": "^3.1.3",
+    "husky": "^8.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "postcss-nested": "^5.0.6"
+  }
+}

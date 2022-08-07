@@ -1,0 +1,7 @@
+.btn {
+  @apply border-black border-2 shadow-sm font-bold justify-center px-4 py-2 bg-black text-white text-base;
+  &:hover,
+  &.active {
+    @apply outline-none ring-2 ring-offset-2 ring-black;
+  }
+}

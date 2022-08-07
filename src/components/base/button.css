@@ -1,0 +1,6 @@
+.btn {
+  @apply flex items-center justify-center text-center cursor-pointer select-none transition duration-200 ease-in-out;
+  &:focus {
+    @apply relative outline-none;
+  }
+}
